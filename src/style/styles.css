@@ -31,9 +31,11 @@ button:disabled {
   background: linear-gradient(326deg, #8f7dfa 0%, #7de6fa 100%);
   margin: 0 auto;
   max-height: 800px;
+  max-width: 1280px;
   min-height: 800px;
+  min-width: 1280px;
   padding: 15px 30px;
-  width: 1200px; }
+  width: 1280px; }
 
 @font-face {
   font-family: 'Metropolis';
