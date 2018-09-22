@@ -1,0 +1,12 @@
+.main {
+  align-content: stretch;
+  align-items: stretch;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  p {
+    color: #fff;
+    font-size: $l-size;
+  }
+}

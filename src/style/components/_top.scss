@@ -1,22 +1,39 @@
 .top-bar {
+  align-content: space-around;
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .brand {
+  flex-basis: 20%;
   font-weight: 300;
   letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase;
 }
 
-.time {
+.datetime {
+  display: flex;
+  flex-basis: 40%;
+  align-items: baseline;
   font-size: $l-size;
+  .time {
+    color: darken($cyan, 50%);
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .date {
+    color: darken($cyan, 30%);
+    font-size: $m-size;
+    font-weight: 300;
+  }
 }
 
 .info {
+  flex-basis: 40%;
   font-size: $s-size;
   font-weight: 300;
   letter-spacing: 0.5px;
+  text-align: right;
 }

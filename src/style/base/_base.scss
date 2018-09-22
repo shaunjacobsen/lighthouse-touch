@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  color: $dark-grey;
+  color: #fff;
   font-family: "Futura", "Helvetica", "Arial", sans-serif !important;
   font-size: 1.6rem;
   line-height: 1.6;
@@ -36,8 +36,8 @@ button:disabled {
   background: rgb(143, 125, 250);
   background: linear-gradient(
     326deg,
-    rgba(143, 125, 250, 1) 0%,
-    rgba(125, 230, 250, 1) 100%
+    $purple 0%,
+    $cyan 100%
   );
   margin: 0 auto;
   max-height: 800px;

@@ -6,7 +6,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  color: #333;
+  color: #fff;
   font-family: "Futura", "Helvetica", "Arial", sans-serif !important;
   font-size: 1.6rem;
   line-height: 1.6; }
@@ -93,20 +93,60 @@ button:disabled {
   src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537649897/lighthouse/fonts/Futura_Heavy_font.ttf") format("truetype"); }
 
 .top-bar {
+  align-content: space-around;
   align-items: center;
   display: flex;
-  justify-content: space-between; }
+  justify-content: center; }
 
 .brand {
+  flex-basis: 20%;
   font-weight: 300;
   letter-spacing: 5px;
   text-align: center;
   text-transform: uppercase; }
 
-.time {
+.datetime {
+  display: flex;
+  flex-basis: 40%;
+  align-items: baseline;
   font-size: 3.2rem; }
+  .datetime .time {
+    color: #046274;
+    font-weight: 600;
+    margin-right: 6px; }
+  .datetime .date {
+    color: #08b5d6;
+    font-size: 1.6rem;
+    font-weight: 300; }
 
 .info {
+  flex-basis: 40%;
   font-size: 1.2rem;
   font-weight: 300;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  text-align: right; }
+
+.main {
+  align-content: stretch;
+  align-items: stretch;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%; }
+  .main p {
+    color: #fff;
+    font-size: 3.2rem; }
+
+.now-playing {
+  margin-bottom: 12px; }
+  .now-playing .room {
+    font-size: 1.2rem;
+    font-weight: 300; }
+  .now-playing .album-art img {
+    border: 3px solid #fff;
+    border-radius: 6px; }
+  .now-playing .title {
+    font-size: 3.2rem; }
+  .now-playing .artist {
+    font-size: 1.6rem;
+    font-weight: 300; }
