@@ -1,0 +1,110 @@
+@import url(~antd/dist/antd.css);
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #333;
+  font-family: "Futura", "Helvetica", "Arial", sans-serif !important;
+  font-size: 1.6rem;
+  line-height: 1.6; }
+
+button {
+  cursor: pointer; }
+
+button:disabled {
+  cursor: default; }
+
+.is-active {
+  font-weight: bold; }
+
+.App {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  justify-content: center; }
+
+.container {
+  background: #8f7dfa;
+  background: linear-gradient(326deg, #8f7dfa 0%, #7de6fa 100%);
+  margin: 0 auto;
+  max-height: 800px;
+  min-height: 800px;
+  padding: 15px 30px;
+  width: 1200px; }
+
+@font-face {
+  font-family: 'Metropolis';
+  font-weight: 400;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648195/lighthouse/fonts/Metropolis-Regular.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Metropolis';
+  font-weight: 200;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648195/lighthouse/fonts/Metropolis-Thin.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Metropolis';
+  font-weight: 300;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648194/lighthouse/fonts/Metropolis-Light.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Metropolis';
+  font-weight: 500;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648194/lighthouse/fonts/Metropolis-Medium.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Metropolis';
+  font-weight: 600;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648195/lighthouse/fonts/Metropolis-SemiBold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Metropolis';
+  font-weight: 700;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648194/lighthouse/fonts/Metropolis-Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Metropolis';
+  font-weight: 800;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648194/lighthouse/fonts/Metropolis-ExtraBold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Futura';
+  font-weight: 300;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537649777/lighthouse/fonts/futura_light_bt.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Futura';
+  font-weight: 400;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537649777/lighthouse/fonts/Futura_Book_font.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Futura';
+  font-weight: 500;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537649790/lighthouse/fonts/futura_medium_bt.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Futura';
+  font-weight: 600;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537649897/lighthouse/fonts/Futura_Heavy_font.ttf") format("truetype"); }
+
+.top-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between; }
+
+.brand {
+  font-weight: 300;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.time {
+  font-size: 3.2rem; }
+
+.info {
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.5px; }

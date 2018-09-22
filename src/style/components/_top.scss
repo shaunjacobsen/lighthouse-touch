@@ -1,0 +1,22 @@
+.top-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 300;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.time {
+  font-size: $l-size;
+}
+
+.info {
+  font-size: $s-size;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}

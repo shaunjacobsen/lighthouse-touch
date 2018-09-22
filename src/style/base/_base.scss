@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $dark-grey;
+  font-family: "Futura", "Helvetica", "Arial", sans-serif !important;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.is-active {
+  font-weight: bold;
+}
+
+.App {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: rgb(143, 125, 250);
+  background: linear-gradient(
+    326deg,
+    rgba(143, 125, 250, 1) 0%,
+    rgba(125, 230, 250, 1) 100%
+  );
+  margin: 0 auto;
+  max-height: 800px;
+  min-height: 800px;
+  padding: 15px 30px;
+  width: 1200px;
+}

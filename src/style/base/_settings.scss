@@ -1,0 +1,57 @@
+// sizes
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+
+// font sizes
+$font-size-small: 1.4rem;
+$font-size-medium: 2.4rem;
+$font-size-large: 3.6rem;
+
+$desktop-breakpoint: 45rem;
+
+// colours
+$light-grey: #f5f5f5;
+$grey: #666666;
+$dark-grey: #333;
+$slate-grey: #2d3446;
+$blue: #40a9ff;
+$dark-blue: #364051;
+$orange: #faad14;
+$volcano: #fa541c;
+$cyan: #13c2c2;
+$yellow: #F9D423;
+
+
+// media queries
+@mixin for-phone-only {
+  @media (max-width: 699px) {
+    @content;
+  }
+}
+@mixin for-phone-landscape-only {
+  @media (max-width: 699px) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) and (orientation: landscape) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
