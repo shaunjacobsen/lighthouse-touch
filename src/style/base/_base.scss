@@ -36,8 +36,8 @@ button:disabled {
   background: rgb(143, 125, 250);
   background: linear-gradient(
     326deg,
-    $purple 0%,
-    $cyan 100%
+    darken($purple, 10%) 0%,
+    darken($cyan, 10%) 100%
   );
   margin: 0 auto;
   max-height: 800px;

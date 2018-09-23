@@ -57,7 +57,10 @@ export class Music extends Component {
 
   prevTrack = async () => {
     try {
-      await axios.get(`http://localhost:5005/${this.state.coordinator}/previous`);
+      await axios.get(
+        `http://localhost:5005/${this.state.coordinator}/previous`
+      );
+
     } catch (e) {}
   };
 
@@ -80,6 +83,7 @@ export class Music extends Component {
       <div>
         <br />
         <div className="now-playing">
+          <div className="room">Playing in {this.state.coordinator}</div>
           <div className="album-art">
             <img
               src={this.state.currentTrack.absoluteAlbumArtUri}
