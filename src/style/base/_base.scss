@@ -8,7 +8,7 @@ html {
 
 body {
   color: #fff;
-  font-family: "Futura", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Gilroy", "Futura", "Helvetica", "Arial", sans-serif !important;
   font-size: 1.6rem;
   line-height: 1.6;
 }
@@ -36,8 +36,8 @@ button:disabled {
   background: rgb(143, 125, 250);
   background: linear-gradient(
     326deg,
-    darken($purple, 10%) 0%,
-    darken($cyan, 10%) 100%
+    darken($volcano, 5%) 0%,
+    darken($yellow, 10%) 100%
   );
   margin: 0 auto;
   max-height: 800px;

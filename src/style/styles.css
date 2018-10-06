@@ -7,7 +7,7 @@ html {
 
 body {
   color: #fff;
-  font-family: "Futura", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Gilroy", "Futura", "Helvetica", "Arial", sans-serif !important;
   font-size: 1.6rem;
   line-height: 1.6; }
 
@@ -28,7 +28,7 @@ button:disabled {
 
 .container {
   background: #8f7dfa;
-  background: linear-gradient(326deg, #654cf8 0%, #4cddf8 100%);
+  background: linear-gradient(326deg, #f74205 0%, #e3bd06 100%);
   margin: 0 auto;
   max-height: 800px;
   max-width: 1280px;
@@ -38,39 +38,59 @@ button:disabled {
   width: 1280px; }
 
 @font-face {
-  font-family: 'Metropolis';
-  font-weight: 400;
-  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648195/lighthouse/fonts/Metropolis-Regular.otf") format("opentype"); }
-
-@font-face {
-  font-family: 'Metropolis';
+  font-family: 'Gilroy';
   font-weight: 200;
-  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648195/lighthouse/fonts/Metropolis-Thin.otf") format("opentype"); }
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1538798254/lighthouse/fonts/Gilroy-Light.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Metropolis';
+  font-family: 'Gilroy';
+  font-weight: 200;
+  font-style: italic;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1538798254/lighthouse/fonts/Gilroy-LightItalic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Gilroy';
   font-weight: 300;
-  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648194/lighthouse/fonts/Metropolis-Light.otf") format("opentype"); }
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1538798254/lighthouse/fonts/Gilroy-Regular.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Metropolis';
+  font-family: 'Gilroy';
+  font-weight: 300;
+  font-style: italic;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1538798254/lighthouse/fonts/Gilroy-RegularItalic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 400;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1538798254/lighthouse/fonts/Gilroy-Medium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 400;
+  font-style: italic;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1538798254/lighthouse/fonts/Gilroy-MediumItalic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Gilroy';
   font-weight: 500;
-  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648194/lighthouse/fonts/Metropolis-Medium.otf") format("opentype"); }
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1538798254/lighthouse/fonts/Gilroy-Bold.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Metropolis';
+  font-family: 'Gilroy';
+  font-weight: 500;
+  font-style: italic;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1538798254/lighthouse/fonts/Gilroy-BoldItalic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Gilroy';
   font-weight: 600;
-  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648195/lighthouse/fonts/Metropolis-SemiBold.otf") format("opentype"); }
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1538798254/lighthouse/fonts/Gilroy-ExtraBold.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Metropolis';
-  font-weight: 700;
-  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648194/lighthouse/fonts/Metropolis-Bold.otf") format("opentype"); }
-
-@font-face {
-  font-family: 'Metropolis';
-  font-weight: 800;
-  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537648194/lighthouse/fonts/Metropolis-ExtraBold.otf") format("opentype"); }
+  font-family: 'Gilroy';
+  font-weight: 600;
+  font-style: italic;
+  src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1538798254/lighthouse/fonts/Gilroy-ExtraBoldItalic.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Futura';
@@ -92,39 +112,58 @@ button:disabled {
   font-weight: 600;
   src: url("https://res.cloudinary.com/placeiknow/raw/upload/v1537649897/lighthouse/fonts/Futura_Heavy_font.ttf") format("truetype"); }
 
-.top-bar {
-  align-content: space-around;
-  align-items: center;
+.card-group {
   display: flex;
-  justify-content: center; }
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-start; }
+  .card-group .card {
+    margin-right: 24px; }
 
-.brand {
-  flex-basis: 20%;
-  font-weight: 300;
-  letter-spacing: 5px;
-  text-align: center;
-  text-transform: uppercase; }
-
-.datetime {
-  display: flex;
-  flex-basis: 40%;
-  align-items: baseline;
-  font-size: 3.2rem; }
-  .datetime .time {
-    color: #046274;
+.card {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  line-break: normal;
+  margin: 12px 0;
+  max-width: 375px;
+  min-height: 100px;
+  padding: 12px 18px; }
+  .card h1 {
     font-weight: 600;
-    margin-right: 6px; }
-  .datetime .date {
-    color: #068ba5;
-    font-size: 1.6rem;
-    font-weight: 300; }
-
-.info {
-  flex-basis: 40%;
-  font-size: 1.2rem;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  text-align: right; }
+    margin: 0 0; }
+  .card h2 {
+    font-weight: 300;
+    size: 1.4rem; }
+  .card p {
+    font-size: 1.4rem; }
+  .card .meta {
+    color: #999999;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
+  .card .image {
+    margin: 12px -18px; }
+    .card .image img {
+      width: 100%;
+      overflow: hidden; }
+  .card .actions {
+    background: #e8e8e8;
+    border-radius: 0 0 4px 4px;
+    display: flex;
+    margin: 12px -18px -12px -18px;
+    padding: 12px 18px; }
+    .card .actions > div {
+      margin-right: 12px; }
+  .card .button {
+    background: #8f7dfa;
+    border-radius: 25px;
+    color: #fff;
+    letter-spacing: 1px;
+    min-width: 50px;
+    padding: 4px 18px; }
 
 .main {
   align-content: stretch;
@@ -151,3 +190,37 @@ button:disabled {
   .now-playing .artist {
     font-size: 1.6rem;
     font-weight: 300; }
+
+.top-bar {
+  align-content: space-around;
+  align-items: center;
+  display: flex;
+  justify-content: center; }
+
+.brand {
+  flex-basis: 20%;
+  font-weight: 300;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.datetime {
+  display: flex;
+  flex-basis: 40%;
+  align-items: baseline;
+  font-size: 3.2rem; }
+  .datetime .time {
+    color: #1c1701;
+    font-weight: 600;
+    margin-right: 6px; }
+  .datetime .date {
+    color: #4e4102;
+    font-size: 1.6rem;
+    font-weight: 300; }
+
+.info {
+  flex-basis: 40%;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: right; }

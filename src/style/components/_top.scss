@@ -19,12 +19,12 @@
   align-items: baseline;
   font-size: $l-size;
   .time {
-    color: darken($cyan, 50%);
+    color: darken($yellow, 50%);
     font-weight: 600;
     margin-right: 6px;
   }
   .date {
-    color: darken($cyan, 40%);
+    color: darken($yellow, 40%);
     font-size: $m-size;
     font-weight: 300;
   }
