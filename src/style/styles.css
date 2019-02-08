@@ -28,7 +28,7 @@ button:disabled {
 
 .container {
   background: #8f7dfa;
-  background: linear-gradient(326deg, #f74205 0%, #e3bd06 100%);
+  background: linear-gradient(326deg, #472894 0%, #512e90 100%);
   margin: 0 auto;
   max-height: 800px;
   max-width: 1280px;
@@ -198,6 +198,7 @@ button:disabled {
   justify-content: center; }
 
 .brand {
+  color: #bda7e3;
   flex-basis: 20%;
   font-weight: 300;
   letter-spacing: 5px;
@@ -210,11 +211,11 @@ button:disabled {
   align-items: baseline;
   font-size: 3.2rem; }
   .datetime .time {
-    color: #1c1701;
+    color: #fff;
     font-weight: 600;
     margin-right: 6px; }
   .datetime .date {
-    color: #4e4102;
+    color: #bda7e3;
     font-size: 1.6rem;
     font-weight: 300; }
 
