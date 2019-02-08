@@ -29,7 +29,7 @@ export class Music extends Component {
 
   getZones = async () => {
     try {
-      const req = await axios.get('http://192.168.1.202:5005/zones');
+      const req = await axios.get(`${process.env.REACT_APP_BRIDGE_API_HOST}:5005/zones`);
       if (req.status === 200) {
         this.setState(state => ({
           zones: req.data,
@@ -51,26 +51,26 @@ export class Music extends Component {
 
   togglePlayState = async () => {
     try {
-      await axios.get(`http://192.168.1.202:5005/${this.state.coordinator}/playpause`);
+      await axios.get(`${process.env.REACT_APP_BRIDGE_API_HOST}:5005/${this.state.coordinator}/playpause`);
     } catch (e) {}
   };
 
   prevTrack = async () => {
     try {
-      await axios.get(`http://192.168.1.202:5005/${this.state.coordinator}/previous`);
+      await axios.get(`${process.env.REACT_APP_BRIDGE_API_HOST}:5005/${this.state.coordinator}/previous`);
     } catch (e) {}
   };
 
   nextTrack = async () => {
     try {
-      await axios.get(`http://192.168.1.202:5005/${this.state.coordinator}/next`);
+      await axios.get(`${process.env.REACT_APP_BRIDGE_API_HOST}:5005/${this.state.coordinator}/next`);
     } catch (e) {}
   };
 
   incrementDecrementVolume = async amount => {
     try {
       await axios.get(
-        `http://192.168.1.202:5005/${this.state.coordinator}/groupVolume/${amount}`
+        `${process.env.REACT_APP_BRIDGE_API_HOST}:5005/${this.state.coordinator}/groupVolume/${amount}`
       );
     } catch (e) {}
   };
