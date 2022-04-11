@@ -167,11 +167,7 @@ const JourneyPlanner = (props) => {
           <span>Eind</span>
         </div>
       </div>
-      {destination && loading && (
-        <div className="loading-container">
-          <Loading />
-        </div>
-      )}
+      {destination && loading && <Loading />}
       {destination && journeyResults && (
         <div className="results">
           {journeyResults.trips.map((result) => {

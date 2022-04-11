@@ -6,10 +6,12 @@ import NSLogo from '../../img/ns.svg';
 
 import NextTrainsLine from './NextTrainsLine';
 import { serverRequester } from '../../http/requesters';
+import Loading from '../loading';
 
 const NextTrainsWidget = (props) => {
   const [showMinutes, setShowMinutes] = useState(true);
   const [nextTrains, setNextTrains] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,11 +26,13 @@ const NextTrainsWidget = (props) => {
   useEffect(() => {
     if (!process.env.NODE_ENV === 'development') {
       // fetch trains
+      setLoading(true);
       serverRequester
         .get('/trains/departures', { params: { station: 'ZD', limit: 8 } })
         .then((response) => {
           setNextTrains(response.data);
-        });
+        })
+        .finally(() => setLoading(false));
     }
   }, []);
 
@@ -42,6 +46,7 @@ const NextTrainsWidget = (props) => {
         </div>
       </div>
       <div className="board">
+        {loading && <Loading pad />}
         {nextTrains.map((t) => (
           <NextTrainsLine
             showMinutes={showMinutes}
