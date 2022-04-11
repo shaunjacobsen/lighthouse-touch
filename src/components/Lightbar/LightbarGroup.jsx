@@ -5,9 +5,9 @@ import cx from 'classnames';
 import { IoBulbOutline } from 'react-icons/io5';
 
 export function LightbarGroup(props) {
-  const { active, roomName } = props;
+  const { active, roomName, slim } = props;
   return (
-    <div className="lightbar-group">
+    <div className={cx('lightbar-group', { slim })}>
       <div className={cx('indicator', { active })}>
         <IoBulbOutline />
       </div>

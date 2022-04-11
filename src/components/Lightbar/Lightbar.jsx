@@ -15,11 +15,14 @@ export function Lightbar(props) {
   }, [])
 
   return <div className="lightbar">
+    <LightbarGroup slim roomName="Aan" />
+    <LightbarGroup slim roomName="Uit" />
     <LightbarGroup roomName="Woonkamer" active />
-    <LightbarGroup roomName="Slaapkamer" />
+    <LightbarGroup roomName="Eetkamer" />
     <LightbarGroup roomName="Keuken" active />
     <LightbarGroup roomName="Badkamer" />
+    <LightbarGroup roomName="Slaapkamer" />
     <LightbarGroup roomName="Hal" />
-    <LightbarGroup roomName="Eetkamer" />
+    <LightbarGroup roomName="Tuin" />
   </div>
 }
