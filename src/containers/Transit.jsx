@@ -5,7 +5,8 @@ import NextTrainsWidget from '../components/Transit/NextTrainsWidget';
 import './transit.scss'
 
 export const Transit = (props) => {
-  return <div className="transit">
+  return <div className="transit
+  ">
     <NextTrainsWidget />
     <JourneyPlanner />
   </div>;

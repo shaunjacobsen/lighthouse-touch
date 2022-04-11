@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import cx from 'classnames';
-import { FaRegBuilding, FaPlane } from 'react-icons/fa';
+import { FaRegBuilding, FaPlane, FaQuestion } from 'react-icons/fa';
 import { IoTrainOutline, IoBicycleOutline, IoWalk } from 'react-icons/io5';
 
 import './journey-planner.scss';
@@ -8,6 +8,7 @@ import { serverRequester } from '../../http/requesters';
 import Loading from '../loading';
 
 import { sampleJourneys } from './sample';
+import moment from 'moment';
 
 const JOURNEY_OPTIONS = { walk: 'WALK', bike: 'BIKE' };
 
@@ -54,6 +55,21 @@ function getPrettyStation(station) {
     default:
       break;
   }
+}
+
+function getIconForTravelType(travelType) {
+  switch (travelType) {
+    case 'WALK':
+      return <IoWalk />;
+    case 'TRAIN':
+      return <IoTrainOutline />;
+    default:
+      return <FaQuestion />;
+  }
+}
+
+function momentTimeWithTZOffset(timeString, tzOffset, unit = 'minutes') {
+  return moment(timeString).add(tzOffset, unit);
 }
 
 const Station = (props) => {
@@ -123,6 +139,12 @@ const JourneyPlanner = (props) => {
     }, 700);
   }, [destination]);
 
+  const widthDuration =
+    600 /
+    ((moment(journeyResults?.maxEnd) - moment(journeyResults?.minStart)) /
+      1000 /
+      60);
+
   return (
     <div className="journey-planner">
       <h1>{title}</h1>
@@ -152,11 +174,51 @@ const JourneyPlanner = (props) => {
       )}
       {destination && journeyResults && (
         <div className="results">
-          {journeyResults.map((result) => {
+          {journeyResults.trips.map((result) => {
             return (
-              <div className={cx('result', { isRealtime: result.realtime })}>
-                <div className="transfers"></div>
-                <div className="crowding"></div>
+              <div
+                key={result.idx}
+                className={cx('result', { 'real-time': result.realtime })}
+              >
+                <div className="transfers">{result.transfers}</div>
+                <div className="crowding">{result.crowdForecast}</div>
+                <div className="schematic">
+                  {result.legs.map((leg, index) => {
+                    const timeBetweenNowAndLeg =
+                      (moment(
+                        leg.origin.actualDateTime || leg.origin.plannedDateTime,
+                      ) -
+                        moment()) /
+                      1000 /
+                      60;
+                    const width =
+                      widthDuration *
+                      ((momentTimeWithTZOffset(
+                        leg.destination.actualDateTime ||
+                          leg.destination.plannedDateTime,
+                        leg.destination.plannedTimeZoneOffset,
+                      ) -
+                        momentTimeWithTZOffset(
+                          leg.origin.actualDateTime ||
+                            leg.origin.plannedDateTime,
+                          leg.origin.plannedTimeZoneOffset,
+                        )) /
+                        1000 /
+                        60);
+
+                    const left = widthDuration * timeBetweenNowAndLeg;
+                    return (
+                      <div className="leg" style={{ width: width, left: left }}>
+                        {getIconForTravelType(leg.product.type)}
+                        {index === 0 &&
+                          moment(
+                            leg.origin.actualDateTime ||
+                              leg.origin.plannedDateTime,
+                          ).format('HH:mm')}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             );
           })}
