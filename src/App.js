@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.scss';
 
 import { Time } from './components/Time';
 import { Nav } from './components/Nav';
 import { Lightbar } from './components/Lightbar/Lightbar';
 
-function App() {
+function App({ children }) {
   return (
     <div className="App">
       <div className="container">
@@ -13,7 +12,10 @@ function App() {
           <h1>lighthouse</h1>
           <Time />
         </header>
-        <Nav />
+        <div className="main-body">
+          <Nav />
+          <main>{children}</main>
+        </div>
         <Lightbar />
       </div>
     </div>

@@ -1,0 +1,8 @@
+.transit {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  > div {
+    margin-left: 12px;
+  }
+}

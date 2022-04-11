@@ -1,0 +1,73 @@
+.journey-planner {
+  border-radius: 12px;
+  color: #fff;
+  height: 575px;
+  width: 775px;
+  .station-pills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 12px 0;
+    .pill {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 12px;
+      border: thin solid #fff;
+      padding: 12px 24px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      min-width: 100px;
+      margin: 0 12px 12px 0;
+      user-select: none;
+      cursor: pointer;
+      span {
+        text-align: right;
+        margin-left: 6px;
+      }
+    }
+  }
+  h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    opacity: 75%;
+  }
+  .journey-options {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    > div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0 24px 12px 0;
+    }
+  }
+}
+
+.toggle {
+  display: flex;
+  flex-direction: row;
+  width: 75px;
+  justify-content: space-around;
+  margin: 0 6px;
+  div {
+    padding: 0 -6px;
+  }
+  svg {
+    font-size: 2rem;
+  }
+  div.selected {
+    border-radius: 5px;
+    background: #8A39E1;
+  }
+}
+
+.loading-container {
+  width: 100%;
+  margin: 0 auto;
+  div {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,82 @@
+.next-trains-widget {
+  width: 300px;
+  border: thin solid #fff;
+  border-radius: 12px;
+  color: #fff;
+  height: 575px;
+  overflow: hidden;
+}
+
+.header {
+  padding: 20px;
+  display: flex;
+  border-bottom: 1px solid #fff;
+  img {
+    width: 50px;
+  }
+  div {
+    margin-left: 12px;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    opacity: 75%;
+    margin: 0;
+  }
+}
+
+.board {
+  .departure {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+    align-items: center;
+    .train-meta {
+      text-align: center;
+      flex-basis: 50px;
+      .train-type {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: -4 px;
+      }
+      .train-no {
+        font-size: 0.8rem;
+      }
+    }
+    .train-info {
+      flex-basis: 50%;
+      max-width: 180px;
+      max-lines: 1;
+      .train-destination {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+      .train-notes {
+        
+      }
+    }
+    .train-arrival {
+      flex: 20%;
+      text-align: right;
+      .minutes {
+        font-size: 0.8rem;
+        span {
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+      }
+      .time {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
