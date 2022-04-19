@@ -1,22 +1,31 @@
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
 import './index.scss';
 import App from './App';
 import Home from './containers/Home';
 import Transit from './containers/Transit';
+import Lighting from './containers/Lighting';
 import reportWebVitals from './reportWebVitals';
+import configureStore from './store/index';
+
+const store = configureStore();
 
 const rootElement = document.getElementById('root');
 render(
-  <App>
+  <Provider store={store}>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/transit" element={<Transit />} />
-      </Routes>
+      <App>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/transit" element={<Transit />} />
+          <Route path="/lighting" element={<Lighting />} />
+        </Routes>
+      </App>
     </BrowserRouter>
-  </App>,
+  </Provider>,
   rootElement,
 );
 

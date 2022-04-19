@@ -1,0 +1,74 @@
+.rooms {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .room {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    width: 50%;
+    border-radius: 12px;
+    height: 100px;
+    margin-bottom: 12px;
+    border: 3px solid #eee;
+    color: #ddd;
+    user-select: none;
+    cursor: pointer;
+    transition: border-color 0.5s ease;
+    padding: 12px;
+    &.some-on {
+      color: #4d96ff;
+      border-color: #4d96ff;
+    }
+    &.all-on {
+      color: #ffd124;
+      border-color: #ffd124;
+    }
+    > div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 100px;
+      font-weight: 700;
+      font-size: 1.5rem;
+      width: 100%;
+      .meta {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 30%;
+      }
+      .dimmer {
+        width: 120px;
+        border-radius: 12px;
+        height: 40px;
+        border: 3px solid #eee;
+        overflow: hidden;
+        .ant-slider {
+          left: -6px;
+          width: 100%;
+        }
+        .ant-slider-track {
+          background-color: #ffd124;
+          height: 40px;
+          top: -13px;
+        }
+        .ant-slider-handle {
+          top: -8px;
+          height: 40px;
+          width: 10px;
+          border-radius: 0;
+          border: none;
+        }
+      }
+      span {
+        font-size: 0.8rem;
+      }
+      svg {
+        font-size: 2rem;
+      }
+    }
+  }
+}
