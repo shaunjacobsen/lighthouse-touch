@@ -1,0 +1,38 @@
+.increment-decrement {
+  border: 3px solid #eee;
+  border-radius: 12px;
+  height: 40px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  .current-figure {
+    font-size: 1.25rem;
+  }
+  .button {
+    transition: transform 0.3s ease-out;
+    height: 40px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    svg {
+      transition: color 0.3s ease-out;
+      margin: 0 auto;
+      color: #525e75;
+    }
+  }
+  &.active {
+    transition: border-color 0.3s ease-out;
+    border-color: #ffd124;
+    .icon {
+      background-color: #ffd124;
+      transform: translateX(40px);
+      svg {
+        transition: color 0.3s ease-out;
+        color: darken(#ffd124, 30%);
+      }
+    }
+  }
+}

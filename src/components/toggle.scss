@@ -1,0 +1,35 @@
+.toggle {
+  border: 3px solid #eee;
+  border-radius: 25px;
+  height: 40px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 80px;
+  .icon {
+    transition: transform 0.3s ease-out;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    svg {
+      transition: color 0.3s ease-out;
+      margin: 0 auto;
+      color: #525e75;
+    }
+  }
+  &.active {
+    transition: border-color 0.3s ease-out;
+    border-color: #ffd124;
+    .icon {
+      background-color: #ffd124;
+      transform: translateX(40px);
+      svg {
+        transition: color 0.3s ease-out;
+        color: darken(#ffd124, 30%);
+      }
+    }
+  }
+}
