@@ -1,0 +1,9 @@
+.weather-nav-widget {
+  z-index: 2;
+  .info {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin: 12px auto;
+  }
+}
