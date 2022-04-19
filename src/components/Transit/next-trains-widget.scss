@@ -5,6 +5,14 @@
   color: #fff;
   height: 575px;
   overflow: hidden;
+  &.short {
+    height: 305px;
+    .board {
+      .departure {
+        padding: 6px;
+      }
+    }
+  }
 }
 
 .header {
@@ -62,7 +70,6 @@
         font-weight: 700;
       }
       .train-notes {
-        
       }
     }
     .train-arrival {

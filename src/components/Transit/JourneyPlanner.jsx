@@ -28,6 +28,7 @@ const DESTINATIONS = {
   utrechtC: { name: 'Utrecht C', icon: <IoTrainOutline />, code: 'UT' },
   rotterdamC: { name: 'Rotterdam C', icon: <IoTrainOutline />, code: 'RTD' },
   denHaagC: { name: 'Den Haag C', icon: <IoTrainOutline />, code: 'GVC' },
+  alkmaarC: { name: 'Alkmaar C', icon: <IoTrainOutline />, code: 'AMR' },
 };
 
 function getPrettyStation(station) {
@@ -50,6 +51,8 @@ function getPrettyStation(station) {
       return 'Rotterdam Centraal';
     case 'UT':
       return 'Utrecht Centraal';
+    case 'AMR':
+      return 'Alkmaar Centraal';
     case '_WERK':
       return 'Werk';
     default:

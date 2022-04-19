@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import moment from 'moment';
+import cx from 'classnames';
 
 import './next-trains-widget.scss';
 import NSLogo from '../../img/ns.svg';
@@ -9,6 +10,7 @@ import { serverRequester } from '../../http/requesters';
 import Loading from '../loading';
 
 const NextTrainsWidget = (props) => {
+  const { short } = props;
   const [showMinutes, setShowMinutes] = useState(true);
   const [nextTrains, setNextTrains] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -28,16 +30,22 @@ const NextTrainsWidget = (props) => {
       // fetch trains
       setLoading(true);
       serverRequester
-        .get('/trains/departures', { params: { station: 'ZD', limit: 8 } })
+        .get('/trains/departures', { params: { station: 'ZD', limit: 20 } })
         .then((response) => {
-          setNextTrains(response.data);
+          const tenMinutesFromNow = moment().add(9, 'minutes');
+          // only get trains that are coming in 10 minutes or later
+          let filteredTrains = response.data.filter((train) => {
+            return moment(train.actualDateTime).isAfter(tenMinutesFromNow);
+          });
+          if (short) filteredTrains = filteredTrains.slice(0, 4);
+          setNextTrains(filteredTrains);
         })
         .finally(() => setLoading(false));
     }
   }, []);
 
   return (
-    <div className="next-trains-widget">
+    <div className={cx('next-trains-widget', { short })}>
       <div className="header">
         <img src={NSLogo} />
         <div>
