@@ -1,11 +1,9 @@
 .date {
-    align-self: center;
-    text-align: right;
-    flex-basis: 65%;
-}
-
-.current-time {
-    font-size: 24px;
+  z-index: 2;
+  margin: 24px auto;
+  text-align: center;
+  .current-time {
+    font-size: 1.5rem;
     font-weight: 700;
-    padding-left: 12px;
+  }
 }
