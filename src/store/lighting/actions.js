@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { bridgeRequester } from '../../http/requesters';
 
-export const fetchLightingRooms = (t) => {
+export const fetchLightingRooms = () => {
   return async (dispatch) => {
     dispatch(fetchLightingRoomsStart());
     try {

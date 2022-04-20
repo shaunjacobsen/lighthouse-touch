@@ -1,3 +1,5 @@
+@import './../scss/vars.scss';
+
 .toggle {
   border: 3px solid #eee;
   border-radius: 25px;
@@ -22,13 +24,13 @@
   }
   &.active {
     transition: border-color 0.3s ease-out;
-    border-color: #ffd124;
+    border-color: $gold;
     .icon {
-      background-color: #ffd124;
+      background-color: $gold;
       transform: translateX(40px);
       svg {
         transition: color 0.3s ease-out;
-        color: darken(#ffd124, 30%);
+        color: darken($gold, 30%);
       }
     }
   }

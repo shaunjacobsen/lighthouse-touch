@@ -1,6 +1,13 @@
 .home-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   height: 577px;
+  align-items: flex-start;
+  > div {
+    margin-right: 12px;
+  }
+  .room-control {
+    border-width: thin;
+  }
 }

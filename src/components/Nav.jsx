@@ -12,12 +12,12 @@ import {
 import { WiDayCloudy } from 'react-icons/wi';
 
 const navigation = [
-  { link: '/', name: 'Home', icon: <IoHomeOutline /> },
-  { link: '/lighting', name: 'Lighting', icon: <IoBulbOutline /> },
-  { link: '/energy', name: 'Energy', icon: <IoLeafOutline /> },
-  { link: '/music', name: 'Music', icon: <IoMusicalNotesOutline /> },
-  { link: '/transit', name: 'Transit', icon: <IoTrainOutline /> },
-  { link: '/weather', name: 'Weather', icon: <WiDayCloudy /> },
+  { link: '/master/', name: 'Home', icon: <IoHomeOutline /> },
+  { link: '/master/lighting', name: 'Lighting', icon: <IoBulbOutline /> },
+  { link: '/master/energy', name: 'Energy', icon: <IoLeafOutline /> },
+  { link: '/master/music', name: 'Music', icon: <IoMusicalNotesOutline /> },
+  { link: '/master/transit', name: 'Transit', icon: <IoTrainOutline /> },
+  { link: '/master/weather', name: 'Weather', icon: <WiDayCloudy /> },
 ];
 
 export function Nav(props) {

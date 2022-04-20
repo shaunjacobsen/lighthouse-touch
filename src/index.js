@@ -4,26 +4,32 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import './index.scss';
-import App from './App';
+import Master from './containers/screens/Master';
+import Mini from './containers/screens/Mini';
 import Home from './containers/Home';
 import Transit from './containers/Transit';
 import Lighting from './containers/Lighting';
 import reportWebVitals from './reportWebVitals';
 import configureStore from './store/index';
+import RoomHome from './containers/RoomHome';
 
 const store = configureStore();
 
 const rootElement = document.getElementById('root');
+
 render(
   <Provider store={store}>
     <BrowserRouter>
-      <App>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/transit" element={<Transit />} />
-          <Route path="/lighting" element={<Lighting />} />
-        </Routes>
-      </App>
+      <Routes>
+        <Route path="/master" element={<Master />}>
+          <Route path="/master" element={<Home />} />
+          <Route path="/master/transit" element={<Transit />} />
+          <Route path="/master/lighting" element={<Lighting />} />
+        </Route>
+        <Route path="/bedroom" element={<Mini roomName="Bedroom" />}>
+          <Route path="/bedroom" element={<RoomHome roomName="Bedroom" />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   </Provider>,
   rootElement,

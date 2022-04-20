@@ -3,9 +3,12 @@ import cx from 'classnames';
 
 import './toggle.scss';
 
-const Toggle = ({ icon, active, onClick }) => {
+const Toggle = ({ icon, active, indeterminate, onClick }) => {
   return (
-    <div onClick={onClick} className={cx('toggle', { active })}>
+    <div
+      onClick={onClick}
+      className={cx('toggle', { active: active || indeterminate })}
+    >
       <div className="icon">{icon}</div>
     </div>
   );

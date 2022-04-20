@@ -1,0 +1,65 @@
+@import './../../scss/vars.scss';
+
+.room-control {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  width: 50%;
+  border-radius: 12px;
+  height: 100px;
+  margin-bottom: 12px;
+  border: 3px solid #eee;
+  color: #ddd;
+  user-select: none;
+  cursor: pointer;
+  transition: border-color 0.5s ease;
+  padding: 12px;
+  &.some-on {
+    color: $gold;
+    border-color: $gold;
+    .toggle {
+      .icon {
+        transform: translateX(20px);
+      }
+    }
+  }
+  &.all-on {
+    color: $gold;
+    border-color: $gold;
+    .toggle {
+      .icon {
+        transform: translateX(40px);
+      }
+    }
+  }
+  &.mini {
+    width: 150px;
+    > div {
+      flex-direction: column;
+    }
+  }
+  > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    width: 100%;
+    .meta {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 30%;
+    }
+
+    span {
+      font-size: 0.8rem;
+    }
+    svg {
+      font-size: 2rem;
+    }
+  }
+}

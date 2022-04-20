@@ -1,3 +1,5 @@
+@import './../../scss/vars.scss';
+
 .journey-planner {
   border-radius: 12px;
   color: #fff;
@@ -30,7 +32,7 @@
   h2 {
     font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     opacity: 75%;
   }
   .journey-options {
@@ -55,7 +57,8 @@
       &.real-time {
         border-color: green;
       }
-      .transfers, .crowding {
+      .transfers,
+      .crowding {
         width: 20px;
       }
       .schematic {
@@ -69,31 +72,30 @@
       }
     }
   }
-}
+  .toggle {
+    display: flex;
+    flex-direction: row;
+    width: 75px;
+    justify-content: space-around;
+    margin: 0 6px;
+    div {
+      padding: 0 -6px;
+    }
+    svg {
+      font-size: 2rem;
+    }
+    div.selected {
+      border-radius: 5px;
+      background: $gold;
+      color: darken($gold, 40%);
+    }
+  }
 
-.toggle {
-  display: flex;
-  flex-direction: row;
-  width: 75px;
-  justify-content: space-around;
-  margin: 0 6px;
-  div {
-    padding: 0 -6px;
-  }
-  svg {
-    font-size: 2rem;
-  }
-  div.selected {
-    border-radius: 5px;
-    background: #FFD124;
-    color: darken(#FFD124, 40%);
-  }
-}
-
-.loading-container {
-  width: 100%;
-  margin: 0 auto;
-  div {
+  .loading-container {
+    width: 100%;
     margin: 0 auto;
+    div {
+      margin: 0 auto;
+    }
   }
 }

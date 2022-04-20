@@ -22,7 +22,6 @@ const WeatherNavWidget = (props) => {
 
   useEffect(() => {
     if (!weatherLastFetched && !isLoadingWeather) {
-      console.log('in use effect');
       fetchWeather();
     }
   }, []);
